@@ -78,7 +78,7 @@ public class CrossPlatformInitialize {
 		BuildTargetGroup.Android,
 		BuildTargetGroup.iOS,
         BuildTargetGroup.WP8,
-		BuildTargetGroup.BB10,
+		//BuildTargetGroup.BB10,
     };
     
 	static BuildTargetGroup[] mobileBuildTargetGroups = new BuildTargetGroup[]
@@ -86,7 +86,7 @@ public class CrossPlatformInitialize {
 		BuildTargetGroup.Android,
 		BuildTargetGroup.iOS,
         BuildTargetGroup.WP8,
-		BuildTargetGroup.BB10,
+		//BuildTargetGroup.BB10,
     };
     
 	static void SetEnabled(string defineName, bool enable, bool mobile)

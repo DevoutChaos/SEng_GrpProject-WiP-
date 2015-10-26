@@ -7,6 +7,7 @@ public class Highscore_Table : MonoBehaviour {
 	void Start () {
 	
 	}
+    /*
 	function ScoreTable(Scores) {
 		var win = Screen.width*0.6;
 		var w1 = win*.35; var w2 = win*0.15; var w3 = win*0.35;
@@ -21,6 +22,7 @@ public class Highscore_Table : MonoBehaviour {
 			}
 		}
 	}
+     */
 	// Update is called once per frame
 	void Update () {
 	
