@@ -100,47 +100,87 @@ public class Enemy_Reg_AI : MonoBehaviour
 			moveX = 0f;
 			moveY = 0f;
 			//Attack Animation
-		} else if ((0 > relativePosX && relativePosX > inverseRange) && ( 0 > relativePosY && relativePosY > inverseRange ) ) {
+		} 
+		else if ((0 > relativePosX && relativePosX > inverseRange) && ( 0 > relativePosY && relativePosY > inverseRange ) ) {
 			moveX = 0f;
 			moveY = 0f;
 			//Attack Animation
-		} else if ((player.transform.position.x > transform.position.x ) && (player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-			moveX++;
-		}  else if ((player.transform.position.x > transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-			moveX++;
-		}  else if ((player.transform.position.x > transform.position.x ) && ( player.transform.position.y == transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveX++;
-		}  else if ((player.transform.position.x == transform.position.x ) && ( player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-		}  else if ((player.transform.position.x == transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-		}  else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y == transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveX--;
-		} else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-			moveX--;
-		}  else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-			moveX--;
-		}			
+		}
+		//player pos. right of enemy
+		else if ( player.transform.position.x > transform.position.x )
+		{
+			//above
+			if ( player.transform.position.y > transform.position.y ) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+				moveX++;
+			}
+			//under
+			else if ( player.transform.position.y < transform.position.y)
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+				moveX++;
+			}
+			//same level
+			else if (player.transform.position.y == transform.position.y ) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveX++;
+			}
+		} 
+		//player pos. left of enemy
+		else if ( player.transform.position.x < transform.position.x ) 
+		{	
+			//same level
+			if (player.transform.position.y == transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveX--;
+			}
+			//above
+			else if (player.transform.position.y > transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+				moveX--;
+			}
+			//under
+			else if (player.transform.position.y < transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+				moveX--;
+			}
+
+		} 
+
+		//player on same vertical axis 
+		else if (player.transform.position.x == transform.position.x ) 
+		{
+			//above
+			if (player.transform.position.y > transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+			} 
+			//under
+			else if (player.transform.position.y < transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+			}
+		}
+	 			
 	}
 
 
