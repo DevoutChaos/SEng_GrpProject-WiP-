@@ -32,6 +32,7 @@ public class GameplayUI_Timer : MonoBehaviour {
 	}
 
 	void GameOver(){
+		System.Threading.Thread.Sleep(1000);//pause for 1 second before transition
 		Application.LoadLevel("GameOverMenu");
 	}
 }
