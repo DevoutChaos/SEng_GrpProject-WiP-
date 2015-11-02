@@ -12,4 +12,9 @@ public class ToGameProper : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void toNG()
+    {
+        Application.LoadLevel("GameplayUI");
+    }
 }
