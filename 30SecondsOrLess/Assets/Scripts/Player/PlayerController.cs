@@ -6,15 +6,18 @@ public class PlayerController : MonoBehaviour {
     public Vector2 myLocation;
     public Vector2 mousePosition;
     public Vector2 touchPosition;
-    public Vector2 worldPosition;
+    public Vector3 worldPosition;
     public Vector2 screenPos;
     public float step;
     public string moveDirection;
     bool buttonPress = false;
+    float neg1;
 
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
+        neg1 = (-1.1f);
+        Physics.gravity = new Vector3(1f, -9.81f, 0f);
 	}
 	
 	// Update is called once per frame
@@ -38,9 +41,10 @@ public class PlayerController : MonoBehaviour {
             mousePosition = Input.mousePosition;
             worldPosition.x = (mousePosition.x - screenPos.x);
             worldPosition.y = (mousePosition.y - screenPos.y);
+            worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector2.MoveTowards(transform.position, worldPosition, step);
+            transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
         }
        
         
