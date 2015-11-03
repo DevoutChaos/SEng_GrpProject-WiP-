@@ -12,4 +12,9 @@ public class ToDifficulty : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void toDifficulty()
+    {
+        Application.LoadLevel("DifficultyMenu");
+    }
 }
