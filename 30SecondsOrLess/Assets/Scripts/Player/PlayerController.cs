@@ -10,14 +10,35 @@ public class PlayerController : MonoBehaviour {
     public Vector2 screenPos;
     public float step;
     public string moveDirection;
-    bool buttonPress = false;
+//HEAD
+    bool buttonPress = false;	
+	// Health variables
+	public int health = 100;
+
+	private bool takingDamage = false;
+	private bool onCooldown = false;
+	public int cooldownDelay = 1;
+
+	// Player's boxcollider
+	public BoxCollider playercollider;
+	public GameObject enemyObject;
+	public Enemy_Reg_AI enemy;
+
+//=======
+   // bool buttonPress = false;
     float neg1;
+// master
 
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
+// HEAD
+		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
+		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
+//=======
         //neg1 = (-1.1f);
         neg1 = (-1f);
+//>>>>>>> master
 	}
 	
 	// Update is called once per frame
@@ -47,8 +68,50 @@ public class PlayerController : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
         }
        
+		if (takingDamage == true) {
+			takingDamage = false;
+		}
         
 	}
+
+	public void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Enemy") {
+
+			enemy.EnemyDamage(1);
+		}
+	}
+
+
+	public void PlayerDamage (int damage)
+	{
+		takingDamage = true;
+		
+		// Disable the box collider so the player doesn't take double damage
+		playercollider.enabled = false;
+		// Start a cooldown period so the player doesn't keep taking damage
+		if (!onCooldown && health > 0) {
+			StartCoroutine (Cooldown ());
+		}
+		
+		// Health - damage
+		health -= damage;
+		// If the player's health is less than 0, kill them
+		if (health <= 0) {
+			GameMaster.KillPlayer(this);
+			Debug.Log ("WASTED");
+		}
+		
+	}
+	
+	// Cooldown after damage so player doesn't take double damage
+	IEnumerator Cooldown ()
+	{
+		// Wait and then re enable collider
+		yield return new WaitForSeconds (cooldownDelay);
+		playercollider.enabled = true;
+	}
+
     public void ButtonPress()
     {
         

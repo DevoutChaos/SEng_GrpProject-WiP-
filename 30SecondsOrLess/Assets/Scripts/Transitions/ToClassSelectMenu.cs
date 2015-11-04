@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ToDifficulty : MonoBehaviour {
+public class ToClassSelectMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,8 @@ public class ToDifficulty : MonoBehaviour {
 	
 	}
 
-    public void toDifficulty()
+    public void toClassSelect()
     {
-        Application.LoadLevel("DifficultyMenu");
+        Application.LoadLevel("ClassSelectMenu");
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//this is mainly for the melee enemy
 public class Enemy_Reg_AI : MonoBehaviour
 {
 	
@@ -13,11 +13,22 @@ public class Enemy_Reg_AI : MonoBehaviour
 	public bool searching = true;
 	public bool aggro = false;
 	public Vector2 playerPosition;
-	public GameObject player;
+	public GameObject playerObject;
+	public PlayerController player;
 	public float range = 1.0f;
 	public float relativePosX;
 	public float relativePosY;	
 	public float inverseRange;
+
+
+	public int enemyHealth = 3;
+	public int damage = 1;
+
+	public BoxCollider enemyCollider;
+	private bool takingDamage = false;
+	private bool onCooldown = false;
+	public int cooldownDelay = 1;
+
 	/*
 	//Animator
 	Animator anim;
@@ -35,7 +46,8 @@ public class Enemy_Reg_AI : MonoBehaviour
 		//anim = GetComponent<Animator> ();
 		
 		//finds the "Player"
-		player = GameObject.FindGameObjectWithTag ("Player");
+		playerObject  = GameObject.FindGameObjectWithTag ("Player");
+		player = playerObject.GetComponent<PlayerController>();
 		
 		inverseRange = 0 - range;
 	}
@@ -47,6 +59,10 @@ public class Enemy_Reg_AI : MonoBehaviour
 			Search();
 		} else if (aggro) {
 			Aggro ();
+		}
+
+		if (takingDamage == true) {
+			takingDamage = false;
 		}
 
 	}
@@ -61,7 +77,7 @@ public class Enemy_Reg_AI : MonoBehaviour
 
 				// Allows animations using speed paramater
 				//anim.SetFloat ("Speed", Mathf.Abs (move));
-				GetComponent<Rigidbody2D>().velocity = new Vector2 (moveX * maxSpeed, moveY * maxSpeed);
+				GetComponent<Rigidbody>().velocity = new Vector2 (moveX * maxSpeed, moveY * maxSpeed);
 
 			/**
 				//Mirrors the animation depending on the facing direction
@@ -82,17 +98,66 @@ public class Enemy_Reg_AI : MonoBehaviour
 				transform.localScale = theScale;
 		}
 
+
 	
+	public void EnemyDamage (int damage)
+	{
+		takingDamage = true;
+		
+		// Disable the box collider so the player doesn't take double damage
+		enemyCollider.enabled = false;
+		// Start a cooldown period so the player doesn't keep taking damage
+		if (!onCooldown && enemyHealth > 0) {
+			StartCoroutine (Cooldown ());
+		}
+		
+		// Health - damage
+		enemyHealth -= damage;
+		// If the player's health is less than 0, kill them
+		if (enemyHealth <= 0) {
+			GameMaster.KillEnemy(this);
+			Debug.Log ("WASTED");
+		}
+		
+	}
+
+	/**
+	public void EnemyDamage(int damage)
+	{
+		// Health - damage
+		enemyHealth -= damage;
+		// If the enemy's health is less than 0, kill them
+		if (enemyHealth <= 0) {
+			GameMaster.KillEnemy (this);
+			Debug.Log ("Killed enemy");
+		}
+	}*/
+
+	public void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Player") {
+
+			player.PlayerDamage(10);
+		}
+	}
+
 	void Search()
 	{
 		moveX = 0;
 		moveY = 0;
 	}
+
+	IEnumerator Cooldown ()
+	{
+		// Wait and then re enable collider
+		yield return new WaitForSeconds (cooldownDelay);
+		enemyCollider.enabled = true;
+	}
 	
 	void Aggro ()
 	{
 		//Checks for the position of the player
-		playerPosition = new Vector2 (player.transform.position.x, player.transform.position.y);
+		playerPosition = new Vector2 (playerObject.transform.position.x, playerObject.transform.position.y);
 		relativePosX = player.transform.position.x - transform.position.x; 
 		relativePosY = player.transform.position.y - transform.position.y; 	
 		
@@ -100,47 +165,87 @@ public class Enemy_Reg_AI : MonoBehaviour
 			moveX = 0f;
 			moveY = 0f;
 			//Attack Animation
-		} else if ((0 > relativePosX && relativePosX > inverseRange) && ( 0 > relativePosY && relativePosY > inverseRange ) ) {
+		} 
+		else if ((0 > relativePosX && relativePosX > inverseRange) && ( 0 > relativePosY && relativePosY > inverseRange ) ) {
 			moveX = 0f;
 			moveY = 0f;
 			//Attack Animation
-		} else if ((player.transform.position.x > transform.position.x ) && (player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-			moveX++;
-		}  else if ((player.transform.position.x > transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-			moveX++;
-		}  else if ((player.transform.position.x > transform.position.x ) && ( player.transform.position.y == transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveX++;
-		}  else if ((player.transform.position.x == transform.position.x ) && ( player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-		}  else if ((player.transform.position.x == transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-		}  else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y == transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveX--;
-		} else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y > transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY++;
-			moveX--;
-		}  else if ((player.transform.position.x < transform.position.x ) && ( player.transform.position.y < transform.position.y)) {
-			moveX = 0f;
-			moveY = 0f;
-			moveY--;
-			moveX--;
-		}			
+		}
+		//player pos. right of enemy
+		else if ( playerObject.transform.position.x > transform.position.x )
+		{
+			//above
+			if ( playerObject.transform.position.y > transform.position.y ) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+				moveX++;
+			}
+			//under
+			else if ( playerObject.transform.position.y < transform.position.y)
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+				moveX++;
+			}
+			//same level
+			else if (playerObject.transform.position.y == transform.position.y ) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveX++;
+			}
+		} 
+		//player pos. left of enemy
+		else if ( playerObject.transform.position.x < transform.position.x ) 
+		{	
+			//same level
+			if (playerObject.transform.position.y == transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveX--;
+			}
+			//above
+			else if (playerObject.transform.position.y > transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+				moveX--;
+			}
+			//under
+			else if (playerObject.transform.position.y < transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+				moveX--;
+			}
+
+		} 
+
+		//player on same vertical axis 
+		else if (playerObject.transform.position.x == transform.position.x ) 
+		{
+			//above
+			if (playerObject.transform.position.y > transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY++;
+			} 
+			//under
+			else if (playerObject.transform.position.y < transform.position.y) 
+			{
+				moveX = 0f;
+				moveY = 0f;
+				moveY--;
+			}
+		}
+	 			
 	}
 
 
