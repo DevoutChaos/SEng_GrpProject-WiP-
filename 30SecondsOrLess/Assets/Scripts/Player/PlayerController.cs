@@ -6,10 +6,11 @@ public class PlayerController : MonoBehaviour {
     public Vector2 myLocation;
     public Vector2 mousePosition;
     public Vector2 touchPosition;
-    public Vector2 worldPosition;
+    public Vector3 worldPosition;
     public Vector2 screenPos;
     public float step;
     public string moveDirection;
+<<<<<<< HEAD
     bool buttonPress = false;	
 	// Health variables
 	public int health = 100;
@@ -23,12 +24,21 @@ public class PlayerController : MonoBehaviour {
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
 
+=======
+    bool buttonPress = false;
+    float neg1;
+>>>>>>> master
 
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
+<<<<<<< HEAD
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
+=======
+        //neg1 = (-1.1f);
+        neg1 = (-1f);
+>>>>>>> master
 	}
 	
 	// Update is called once per frame
@@ -52,9 +62,10 @@ public class PlayerController : MonoBehaviour {
             mousePosition = Input.mousePosition;
             worldPosition.x = (mousePosition.x - screenPos.x);
             worldPosition.y = (mousePosition.y - screenPos.y);
+            worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector2.MoveTowards(transform.position, worldPosition, step);
+            transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
         }
        
 		if (takingDamage == true) {
