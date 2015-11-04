@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     public Vector2 screenPos;
     public float step;
     public string moveDirection;
-<<<<<<< HEAD
+//HEAD
     bool buttonPress = false;	
 	// Health variables
 	public int health = 100;
@@ -24,21 +24,21 @@ public class PlayerController : MonoBehaviour {
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
 
-=======
-    bool buttonPress = false;
+//=======
+   // bool buttonPress = false;
     float neg1;
->>>>>>> master
+// master
 
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
-<<<<<<< HEAD
+// HEAD
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
-=======
+//=======
         //neg1 = (-1.1f);
         neg1 = (-1f);
->>>>>>> master
+//>>>>>>> master
 	}
 	
 	// Update is called once per frame
