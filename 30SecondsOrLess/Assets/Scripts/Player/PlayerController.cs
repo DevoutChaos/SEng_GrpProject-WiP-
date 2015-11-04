@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
-        neg1 = (-1.1f);
-        Physics.gravity = new Vector3(1f, -9.81f, 0f);
+        //neg1 = (-1.1f);
+        neg1 = (-1f);
 	}
 	
 	// Update is called once per frame
