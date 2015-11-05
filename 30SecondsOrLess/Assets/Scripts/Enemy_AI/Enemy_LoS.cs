@@ -16,6 +16,7 @@ public class Enemy_LoS : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        player = GameObject.FindGameObjectWithTag("Player");
 		inverseRange = 0 - relativePos;
 	}
 	

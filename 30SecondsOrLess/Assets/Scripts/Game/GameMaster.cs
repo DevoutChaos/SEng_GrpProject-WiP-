@@ -10,9 +10,6 @@ public class GameMaster : MonoBehaviour
 {
 	
 	public static GameMaster gameMaster;
-	
-	public Transform playerPrefab;
-	public Transform spawnPoint;
 	public int delay = 2;
 	
 	// Use this for initialization
