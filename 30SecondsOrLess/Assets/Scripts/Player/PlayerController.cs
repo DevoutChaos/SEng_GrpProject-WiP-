@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour {
 //HEAD
     bool buttonPress = false;	
 	// Health variables
-	public int health = 100;
+	public float health = 200f;
+	public float damage = 30f;
 
 	private bool takingDamage = false;
 	private bool onCooldown = false;
@@ -23,6 +24,10 @@ public class PlayerController : MonoBehaviour {
 	public BoxCollider playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
+
+	public GameObject playerBarObject;
+	public Player_Health playerHealthBar;
+
 
 //=======
    // bool buttonPress = false;
@@ -35,6 +40,10 @@ public class PlayerController : MonoBehaviour {
 // HEAD
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
+
+		playerBarObject = GameObject.FindGameObjectWithTag ("PlayerHealthBar");	
+		playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
+
 //=======
         //neg1 = (-1.1f);
         neg1 = (-1f);
@@ -78,13 +87,15 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (other.tag == "Enemy") {
 
-			enemy.EnemyDamage(1);
+			enemy.EnemyDamage(damage);
+
 		}
 	}
 
 
-	public void PlayerDamage (int damage)
+	public void PlayerDamage (float damage)
 	{
+		playerHealthBar.DecreaseHealth(damage);
 		takingDamage = true;
 		
 		// Disable the box collider so the player doesn't take double damage
@@ -93,7 +104,8 @@ public class PlayerController : MonoBehaviour {
 		if (!onCooldown && health > 0) {
 			StartCoroutine (Cooldown ());
 		}
-		
+
+
 		// Health - damage
 		health -= damage;
 		// If the player's health is less than 0, kill them
