@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
 
 		playerBarObject = GameObject.FindGameObjectWithTag ("PlayerHealthBar");	
-		playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
+		//playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
 
         testHits = true;
         neg1 = (-1f);
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
             worldPosition.y = (mousePosition.y - screenPos.y);
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
-            Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
+            //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
             transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
             angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);

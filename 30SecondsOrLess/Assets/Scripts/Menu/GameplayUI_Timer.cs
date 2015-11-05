@@ -21,7 +21,7 @@ public class GameplayUI_Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (timeRemaining > 0) {
-			Debug.Log("Timer counting down..."+timeRemaining);
+			//Debug.Log("Timer counting down..."+timeRemaining);
 			timeRemaining -=Time.deltaTime;
 
 			text.text = "Timer: " + (timeRemaining.ToString());

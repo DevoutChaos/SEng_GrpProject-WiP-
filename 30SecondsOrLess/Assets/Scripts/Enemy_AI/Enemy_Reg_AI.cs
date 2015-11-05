@@ -90,8 +90,10 @@ public class Enemy_Reg_AI : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Something");
         if (other.tag == "Player")
         {
+            Debug.Log("Player");
             player.PlayerDamage(damage);
         }
     }
