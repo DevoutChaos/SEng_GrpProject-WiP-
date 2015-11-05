@@ -4,16 +4,18 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
     //Declarations
     public Vector2 myLocation;
-    public Vector2 mousePosition;
+    public Vector3 mousePosition;
     public Vector2 touchPosition;
     public Vector3 worldPosition;
     public Vector2 screenPos;
     public float step;
+    public float angle;
     public string moveDirection;
 //HEAD
     bool buttonPress = false;	
 	// Health variables
-	public int health = 100;
+	public float health = 200f;
+	public float damage = 30f;
 
 	private bool takingDamage = false;
 	private bool onCooldown = false;
@@ -23,6 +25,10 @@ public class PlayerController : MonoBehaviour {
 	public BoxCollider playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
+
+	public GameObject playerBarObject;
+	public Player_Health playerHealthBar;
+
 
 //=======
    // bool buttonPress = false;
@@ -35,6 +41,10 @@ public class PlayerController : MonoBehaviour {
 // HEAD
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
+
+		playerBarObject = GameObject.FindGameObjectWithTag ("PlayerHealthBar");	
+		playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
+
 //=======
         //neg1 = (-1.1f);
         neg1 = (-1f);
@@ -60,12 +70,15 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButton("Fire1") )
         {
             mousePosition = Input.mousePosition;
+            mousePosition.z = neg1;
             worldPosition.x = (mousePosition.x - screenPos.x);
             worldPosition.y = (mousePosition.y - screenPos.y);
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
             transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
+            angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
        
 		if (takingDamage == true) {
@@ -78,13 +91,15 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (other.tag == "Enemy") {
 
-			enemy.EnemyDamage(1);
+			enemy.EnemyDamage(damage);
+
 		}
 	}
 
 
-	public void PlayerDamage (int damage)
+	public void PlayerDamage (float damage)
 	{
+		playerHealthBar.DecreaseHealth(damage);
 		takingDamage = true;
 		
 		// Disable the box collider so the player doesn't take double damage
@@ -93,7 +108,8 @@ public class PlayerController : MonoBehaviour {
 		if (!onCooldown && health > 0) {
 			StartCoroutine (Cooldown ());
 		}
-		
+
+
 		// Health - damage
 		health -= damage;
 		// If the player's health is less than 0, kill them
