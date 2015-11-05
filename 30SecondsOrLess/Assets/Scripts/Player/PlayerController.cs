@@ -4,11 +4,12 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
     //Declarations
     public Vector2 myLocation;
-    public Vector2 mousePosition;
+    public Vector3 mousePosition;
     public Vector2 touchPosition;
     public Vector3 worldPosition;
     public Vector2 screenPos;
     public float step;
+    public float angle;
     public string moveDirection;
 //HEAD
     bool buttonPress = false;	
@@ -69,12 +70,15 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButton("Fire1") )
         {
             mousePosition = Input.mousePosition;
+            mousePosition.z = neg1;
             worldPosition.x = (mousePosition.x - screenPos.x);
             worldPosition.y = (mousePosition.y - screenPos.y);
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
             transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
+            angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
        
 		if (takingDamage == true) {
