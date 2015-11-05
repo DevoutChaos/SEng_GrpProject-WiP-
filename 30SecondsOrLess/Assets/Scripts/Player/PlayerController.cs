@@ -3,21 +3,21 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
     //Declarations
-    public Vector2 myLocation;
-    public Vector3 mousePosition;
-    public Vector2 touchPosition;
-    public Vector3 worldPosition;
-    public Vector2 screenPos;
+    Vector2 myLocation;
+    Vector3 mousePosition;
+    Vector2 touchPosition;
+    Vector3 worldPosition;
+    Vector2 screenPos;
     public float step;
-    public float angle;
-    public string moveDirection;
-//HEAD
+    float angle;
+    string moveDirection;
+    
     bool buttonPress = false;	
 	// Health variables
 	public float health = 200f;
-	public float damage = 30f;
+	public float damage = 1f;
 
-	private bool takingDamage = false;
+	public bool testHits = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
 
@@ -30,25 +30,21 @@ public class PlayerController : MonoBehaviour {
 	public Player_Health playerHealthBar;
 
 
-//=======
-   // bool buttonPress = false;
+   
     float neg1;
-// master
-
     // Use this for initialization
 	void Start () {
         myLocation = this.transform.position;
-// HEAD
+
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
 
 		playerBarObject = GameObject.FindGameObjectWithTag ("PlayerHealthBar");	
-		playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
+		//playerHealthBar = playerBarObject.GetComponent<Player_Health> ();
 
-//=======
-        //neg1 = (-1.1f);
+        testHits = true;
         neg1 = (-1f);
-//>>>>>>> master
+
 	}
 	
 	// Update is called once per frame
@@ -57,16 +53,7 @@ public class PlayerController : MonoBehaviour {
         step = Time.deltaTime;
         screenPos.x = ((Screen.width / 2) + myLocation.x);
         screenPos.y = ((Screen.height / 2) + myLocation.y);
-        /*
-        if (Input.touchCount > 0)
-        {
-            touchPosition = Input.GetTouch(0).position;
-            worldPosition.x = (touchPosition.x - screenPos.x);
-            worldPosition.y = (touchPosition.y - screenPos.y);
-            Debug.DrawLine(myLocation, worldPosition, Color.yellow);
-            Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-        }
-         * */
+        
         if (Input.GetButton("Fire1") )
         {
             mousePosition = Input.mousePosition;
@@ -75,24 +62,17 @@ public class PlayerController : MonoBehaviour {
             worldPosition.y = (mousePosition.y - screenPos.y);
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
-            Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
+            //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
             transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
             angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
-       
-		if (takingDamage == true) {
-			takingDamage = false;
-		}
-        
 	}
 
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy") {
-
 			enemy.EnemyDamage(damage);
-
 		}
 	}
 
@@ -100,20 +80,16 @@ public class PlayerController : MonoBehaviour {
 	public void PlayerDamage (float damage)
 	{
 		playerHealthBar.DecreaseHealth(damage);
-		takingDamage = true;
-		
 		// Disable the box collider so the player doesn't take double damage
 		playercollider.enabled = false;
+        testHits = false;
 		// Start a cooldown period so the player doesn't keep taking damage
-		if (!onCooldown && health > 0) {
+		if (!onCooldown && playerHealthBar.cur_Health > 0) {
 			StartCoroutine (Cooldown ());
 		}
 
-
-		// Health - damage
-		health -= damage;
 		// If the player's health is less than 0, kill them
-		if (health <= 0) {
+		if (playerHealthBar.cur_Health <= 0) {
 			GameMaster.KillPlayer(this);
 			Debug.Log ("WASTED");
 		}
@@ -126,11 +102,11 @@ public class PlayerController : MonoBehaviour {
 		// Wait and then re enable collider
 		yield return new WaitForSeconds (cooldownDelay);
 		playercollider.enabled = true;
+        testHits = true;
 	}
 
     public void ButtonPress()
-    {
-        
+    {   
         Debug.Log("Hey");
     }
 }

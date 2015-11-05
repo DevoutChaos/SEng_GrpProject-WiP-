@@ -20,6 +20,6 @@ public class EasyAI : MonoBehaviour {
         //Printing
         Debug.Log("EASY");
 
-        Application.LoadLevel("GameplayUI");
+        Application.LoadLevel("TutorialStage");
     }
 }
