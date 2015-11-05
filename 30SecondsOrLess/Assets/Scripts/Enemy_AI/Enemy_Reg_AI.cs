@@ -21,14 +21,16 @@ public class Enemy_Reg_AI : MonoBehaviour
 	public float inverseRange;
 
 
-	public int enemyHealth = 3;
-	public int damage = 1;
+	public float enemyHealth = 100f;
+	public float damage = 10f;
 
 	public BoxCollider enemyCollider;
 	private bool takingDamage = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
 
+	public GameObject enemyBarObject;
+	public Enemy_Health enemyHealthBar;
 	/*
 	//Animator
 	Animator anim;
@@ -48,6 +50,10 @@ public class Enemy_Reg_AI : MonoBehaviour
 		//finds the "Player"
 		playerObject  = GameObject.FindGameObjectWithTag ("Player");
 		player = playerObject.GetComponent<PlayerController>();
+
+		enemyBarObject = GameObject.FindGameObjectWithTag ("EnemyHealthBar");	
+		enemyHealthBar = enemyBarObject.GetComponent<Enemy_Health> ();
+
 		
 		inverseRange = 0 - range;
 	}
@@ -64,6 +70,8 @@ public class Enemy_Reg_AI : MonoBehaviour
 		if (takingDamage == true) {
 			takingDamage = false;
 		}
+
+
 
 	}
 
@@ -100,8 +108,9 @@ public class Enemy_Reg_AI : MonoBehaviour
 
 
 	
-	public void EnemyDamage (int damage)
+	public void EnemyDamage (float damage)
 	{
+		enemyHealthBar.DecreaseHealth(damage);
 		takingDamage = true;
 		
 		// Disable the box collider so the player doesn't take double damage
@@ -137,7 +146,8 @@ public class Enemy_Reg_AI : MonoBehaviour
 	{
 		if (other.tag == "Player") {
 
-			player.PlayerDamage(10);
+			player.PlayerDamage(damage);
+
 		}
 	}
 
