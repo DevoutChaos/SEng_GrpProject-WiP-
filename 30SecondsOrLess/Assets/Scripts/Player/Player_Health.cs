@@ -26,6 +26,7 @@ public class Player_Health : MonoBehaviour {
 	 * change to include parameter for damage from Player
 	 */
 	public void DecreaseHealth(float damage) {
+        Debug.Log("Damage!");
 		cur_Health -= damage; //decrease HP by 2 each for testing
 	}
 }
