@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour {
         neg1 = (-1f);
 
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
