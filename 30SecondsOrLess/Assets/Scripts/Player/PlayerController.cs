@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
     //Declarations
-    Vector2 myLocation;
+    public Vector3 myLocation;
     Vector3 mousePosition;
     Vector2 touchPosition;
     Vector3 worldPosition;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     float neg1;
     // Use this for initialization
 	void Start () {
-        myLocation = this.transform.position;
+        //myLocation = this.transform.position;
 
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        myLocation = transform.position;
+        //myLocation = transform.position;
         step = Time.deltaTime;
         screenPos.x = ((Screen.width / 2) + myLocation.x);
         screenPos.y = ((Screen.height / 2) + myLocation.y);
