@@ -7,8 +7,8 @@ public class CaveGenerator : BaseGenerator {
 	public int deathLimit = 4;
 	public int birthLimit= 4;
 	public int numberOfSteps = 3;
-	public bool fillEdges = false;
-	public bool oneCave = false;
+	bool fillEdges = true; 
+	bool oneCave = true;//we always want a complete path to anywhere in the map
 	public int yOffset = 0;
 	public enum CATypes {type1,type2};
 	public CATypes caType;
@@ -213,7 +213,7 @@ public class CaveGenerator : BaseGenerator {
 	}
 
 
-	public Point? FindNearestSpace(int[,] map,Point startPoint){//Returns nearest clear space to specified point
+	public Point FindNearestSpace(int[,] map,Point startPoint){//Returns nearest clear space to specified point
 		var open = new Queue<Point>();
 		int[,] tempmap = new int[map.GetLength (0), map.GetLength (1)];//Tracks visited
 		tempmap[startPoint.x,startPoint.y]=1;
@@ -266,7 +266,7 @@ public class CaveGenerator : BaseGenerator {
 				
 			}
 		}
-		return null;
+		return new Point(0,0); 
 	}
 
 }

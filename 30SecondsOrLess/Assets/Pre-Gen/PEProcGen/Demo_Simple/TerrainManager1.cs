@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TerrainManager : MonoBehaviour {
+public class TerrainManager1: MonoBehaviour {
 	public Transform player;
 	public Transform terrain;
 	private HillGenerator hillGenerator = null;
