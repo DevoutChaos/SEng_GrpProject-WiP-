@@ -17,7 +17,9 @@ public class TerrainRenderer : MonoBehaviour {
 	}
 
 	void Start () {
-		LoadSprites();
+		//LoadSprites();
+
+
 	}
 	void LateUpdate(){
 		if(Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
