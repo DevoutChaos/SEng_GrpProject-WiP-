@@ -3,30 +3,33 @@ using System.Collections;
 
 public class TerrainManager : MonoBehaviour {
 	public Transform terrain;
-	public GameObject playerObject;
-	public PlayerController player;
+	public Transform player;
+
+	//public PlayerController player;
 	//private HillGenerator hillGenerator = null;
-	private RoomGenerator roomGenerator = null;
+	//private RoomGenerator roomGenerator = null;
 	//private AnimationCurve defaultCurve;
 
 	void Awake(){
 		//hillGenerator = terrain.GetComponent<HillGenerator>();
-		roomGenerator = terrain.GetComponent<RoomGenerator>();
+		//roomGenerator = terrain.GetComponent<RoomGenerator>();
 		//if(hillGenerator) defaultCurve = hillGenerator.contourCurve;
 	}
 	void Start () {
-		playerObject = GameObject.FindGameObjectWithTag ("Player");
-		player = playerObject.GetComponent<PlayerController>();
-		//GenerateCave();
+	
+		//player.position = new Vector3 (1, 1, 0);
+		GenerateCave();
 		//GenerateRoom();
 	}
 
-	void GenerateCave(){
+	public void GenerateCave(){
 		CaveGenerator caveGenerator = terrain.GetComponent<CaveGenerator>();
 		caveGenerator.Generate();
+		//playerObject = GameObject.FindGameObjectWithTag ("Player");
+
 		CaveGenerator.Point? point = caveGenerator.FindNearestSpace(caveGenerator.CurrentMap,new CaveGenerator.Point(0,0));//Find nearest clear point to bottom corner of map
 		if (point.HasValue)
-			player.myLocation = new Vector3(point.Value.x,point.Value.y,0) + terrain.position;//Terrain transform may not be at zero so map coordinates will be offset by its position
+			player.position = new Vector3(point.Value.x ,point.Value.y,0) + terrain.position;//Terrain transform may not be at zero so map coordinates will be offset by its position
 	}
 	/**
 	void GenerateRoom(){
@@ -66,7 +69,7 @@ public class TerrainManager : MonoBehaviour {
 	}
 
 */
-
+	/**
 	void OnGUI(){
 		if(roomGenerator){
 			if(GUILayout.Button("GenerateCave"))
@@ -74,7 +77,7 @@ public class TerrainManager : MonoBehaviour {
 				GenerateCave();
 		}
 		}
-	/**
+
 		if(hillGenerator){
 			if(GUILayout.Button("GenerateHillsAndCaves")){
 				GenerateHillsAndCaves();
@@ -89,4 +92,4 @@ public class TerrainManager : MonoBehaviour {
 */
 	}
 
-}
+

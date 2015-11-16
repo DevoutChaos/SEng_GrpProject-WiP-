@@ -10,7 +10,7 @@ public class CaveGenerator : BaseGenerator {
 	bool fillEdges = true; 
 	bool oneCave = true;//we always want a complete path to anywhere in the map
 	public int yOffset = 0;
-	public enum CATypes {type1,type2};
+	public enum CATypes {type1,type2}; //{type1,type2}; 
 	public CATypes caType;
 	private int startfillindex = 999;
 
@@ -53,9 +53,7 @@ public class CaveGenerator : BaseGenerator {
 		FillAll();
 		GenerateMap();
 		if(fillEdges) FillInEdges(CurrentMap);
-		if(oneCave){
-			FillAllButLargest(CurrentMap);
-		}
+		if (oneCave) FillAllButLargest(CurrentMap);
 		if(renderImmediate) Render ();
 	}
 
@@ -81,6 +79,7 @@ public class CaveGenerator : BaseGenerator {
 			}
 		}
 	}
+
 	int[,] DoSimulationStep(int[,] oldMap){//Type1 - The original, uses more memory
 		int[,] newMap = new int[oldMap.GetLength(0),oldMap.GetLength(1)];
 		for (int x = 0; x < oldMap.GetLength(0); x++) {
