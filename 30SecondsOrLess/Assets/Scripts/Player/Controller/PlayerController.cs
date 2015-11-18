@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	public bool testHits = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
-
+	public float speed = 1f;
 	// Player's boxcollider
 	public BoxCollider playercollider;
 	public GameObject enemyObject;
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
+            transform.position = Vector3.MoveTowards(transform.position, worldPosition, speed * step);
             angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
