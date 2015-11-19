@@ -118,7 +118,7 @@ public class GameData : MonoBehaviour
     {
         playerClass = "Ranger";
         /****Temporary code for TESTING ONLY****/
-        playerExp = 5000;
+        playerExp = 500;
         Application.LoadLevel("levelUpMenu");
         /****End of temporary code****/
         //Application.LoadLevel("TutorialStage");
