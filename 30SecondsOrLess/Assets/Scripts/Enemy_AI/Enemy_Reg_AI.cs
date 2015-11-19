@@ -115,8 +115,8 @@ public class Enemy_Reg_AI : MonoBehaviour
     {
         //Checks for the position of the player
         playerPosition = new Vector2(playerObject.transform.position.x, playerObject.transform.position.y);
-        relativePosX = player.transform.position.x - transform.position.x;
-        relativePosY = player.transform.position.y - transform.position.y;
+        relativePosX = playerPosition.x - transform.position.x;
+        relativePosY = playerPosition.y - transform.position.y;
         if ((0 < relativePosX && relativePosX < range) && (0 < relativePosY && relativePosY < range))
         {
             moveX = 0f;
