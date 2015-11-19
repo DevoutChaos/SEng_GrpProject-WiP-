@@ -15,6 +15,7 @@ public class Enemy_Reg_AI : MonoBehaviour
     public Vector2 playerPosition;
     public GameObject playerObject;
     public PlayerController player;
+	public Rigidbody2D thisRigid;
     public float range = 1.0f;
     public float relativePosX;
     public float relativePosY;
@@ -58,7 +59,7 @@ public class Enemy_Reg_AI : MonoBehaviour
     }
     void FixedUpdate()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
+        thisRigid.velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
     }
     void Flip()
     {
@@ -71,7 +72,7 @@ public class Enemy_Reg_AI : MonoBehaviour
     {
         enemyHealthBar.DecreaseHealth(damage);
         takingDamage = true;
-
+		Debug.Log ("STRIKE!!!");
         // Disable the box collider so the player doesn't take double damage
         enemyCollider.enabled = false;
         // Start a cooldown period so the player doesn't keep taking damage
@@ -88,14 +89,15 @@ public class Enemy_Reg_AI : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Something");
+        //Debug.Log("Something");
         if (other.tag == "Player")
         {
             Debug.Log("Player");
             player.PlayerDamage(damage);
         }
+
     }
 
     void Search()
