@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
     public float step;
     float angle;
     string moveDirection;
-    
+    public SpriteRenderer meleeAtkSprite;
+
     bool buttonPress = false;	
 	// Health variables
 	public float health = 200f;
@@ -73,8 +74,11 @@ public class PlayerController : MonoBehaviour {
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy") {
+            Debug.Log("attacking enemy");
 			enemy.EnemyDamage(damage);
-		}
+            meleeAtkSprite.enabled = true;
+            StartCoroutine(atkCooldown());
+        }
 	}
 
 
@@ -105,7 +109,14 @@ public class PlayerController : MonoBehaviour {
 		playercollider.enabled = true;
         testHits = true;
 	}
-
+    
+    //cooldown for sprite to disappear
+    IEnumerator atkCooldown()
+    {
+        // Wait for sprite to appear before disappearing
+        yield return new WaitForSeconds(0.4f);
+        meleeAtkSprite.enabled = false;
+    }
     public void ButtonPress()
     {   
         Debug.Log("Hey");
