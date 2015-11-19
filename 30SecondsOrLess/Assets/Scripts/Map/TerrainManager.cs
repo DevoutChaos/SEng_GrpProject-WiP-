@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class TerrainManager : MonoBehaviour {
 	public Transform terrain;
 	public Transform player;
+	public Transform enemy;
 
 	//public PlayerController player;
 	//private HillGenerator hillGenerator = null;
@@ -19,17 +21,26 @@ public class TerrainManager : MonoBehaviour {
 	
 		//player.position = new Vector3 (1, 1, 0);
 		GenerateCave();
+
 		//GenerateRoom();
 	}
 
 	public void GenerateCave(){
-		CaveGenerator caveGenerator = terrain.GetComponent<CaveGenerator>();
-		caveGenerator.Generate();
+		CaveGenerator caveGenerator = terrain.GetComponent<CaveGenerator> ();
+		caveGenerator.Generate ();
 		//playerObject = GameObject.FindGameObjectWithTag ("Player");
 
-		CaveGenerator.Point? point = caveGenerator.FindNearestSpace(caveGenerator.CurrentMap,new CaveGenerator.Point(0,0));//Find nearest clear point to bottom corner of map
-		if (point.HasValue)
-			player.position = new Vector3(point.Value.x ,point.Value.y,0) + terrain.position;//Terrain transform may not be at zero so map coordinates will be offset by its position
+		CaveGenerator.Point? point = caveGenerator.FindNearestSpace (caveGenerator.CurrentMap, new CaveGenerator.Point (0, 0));//Find nearest clear point to bottom corner of map
+		if (point.HasValue){
+			player.position = new Vector3 (point.Value.x, point.Value.y, 0) + terrain.position;//Terrain transform may not be at zero so map coordinates will be offset by its position
+		}	
+		ArrayList points = caveGenerator.FindSpotForEnemy(caveGenerator.CurrentMap);
+		int size = points.Count;
+		int loc = Random.Range(0, size);
+		CaveGenerator.Point? enemLocation = (CaveGenerator.Point)points[loc];
+		enemy.position = new Vector3 (enemLocation.Value.x, enemLocation.Value.y, 0) + terrain.position;
+
+	
 	}
 	/**
 	void GenerateRoom(){

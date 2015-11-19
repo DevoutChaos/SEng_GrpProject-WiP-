@@ -13,6 +13,7 @@ public class CaveGenerator : BaseGenerator {
 	public enum CATypes {type1,type2}; //{type1,type2}; 
 	public CATypes caType;
 	private int startfillindex = 999;
+	public ArrayList spots;
 
 	public struct Point
 	{
@@ -163,6 +164,9 @@ public class CaveGenerator : BaseGenerator {
 		}
 		FillAllBut (map, fillIndex, 1);
 	}
+
+
+
 	public List<Point> FloodFill(int[,] oldMap){//startfillindex - each separate cave is given its own fillindex, this is the start of those indexes
 		int fillindex = startfillindex;
 		List<Point> fillCounts = new List<Point>();//x=fillindex,y=count - Counts the size of each cave, handy for getting rid of all but the largest cave
@@ -209,6 +213,25 @@ public class CaveGenerator : BaseGenerator {
 			}
 		}
 		return fillCounts;
+	}
+
+
+	public ArrayList FindSpotForEnemy(int[,] map) {
+
+		spots = new ArrayList();
+
+		for (long i = map.GetLongLength(0) - 1; i >= 0; i--) {
+			for (long ii = map.GetLength(1) - 1; ii >= 0; ii--) {
+				if (map[i,ii] == 0){
+					spots.Add(new Point((int)i,(int)ii));
+		            i -= 5; //to avoid having spots near each other;
+	    			ii -= 5;// same ^
+					if (i < 0 || ii < 0 )
+						return spots;
+				}
+			}
+		}
+		return spots;
 	}
 
 
@@ -267,5 +290,8 @@ public class CaveGenerator : BaseGenerator {
 		}
 		return new Point(0,0); 
 	}
+
+	
+
 
 }
