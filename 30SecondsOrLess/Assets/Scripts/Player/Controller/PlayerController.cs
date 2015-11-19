@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
     //Declarations
-    Vector2 myLocation;
+    public Vector3 myLocation;
     Vector3 mousePosition;
     Vector2 touchPosition;
     Vector3 worldPosition;
@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour {
 	public bool testHits = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
-
+	public float speed = 1f;
 	// Player's boxcollider
-	public BoxCollider playercollider;
+	public BoxCollider2D playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     float neg1;
     // Use this for initialization
 	void Start () {
-        myLocation = this.transform.position;
+		//myLocation = this.transform.position;
 
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
+            transform.position = Vector3.MoveTowards(transform.position, worldPosition, speed * step);
             angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
