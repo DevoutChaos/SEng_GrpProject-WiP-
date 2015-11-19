@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //this is mainly for the melee enemy
 public class Enemy_Reg_AI : MonoBehaviour
@@ -23,7 +23,7 @@ public class Enemy_Reg_AI : MonoBehaviour
 
     public float damage = 10f;
 
-    public BoxCollider enemyCollider;
+    public CircleCollider2D enemyCollider;
     private bool takingDamage = false;
     private bool onCooldown = false;
     public int cooldownDelay = 1;
@@ -58,7 +58,7 @@ public class Enemy_Reg_AI : MonoBehaviour
     }
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
     }
     void Flip()
     {
@@ -115,8 +115,8 @@ public class Enemy_Reg_AI : MonoBehaviour
     {
         //Checks for the position of the player
         playerPosition = new Vector2(playerObject.transform.position.x, playerObject.transform.position.y);
-        relativePosX = player.transform.position.x - transform.position.x;
-        relativePosY = player.transform.position.y - transform.position.y;
+        relativePosX = playerPosition.x - transform.position.x;
+        relativePosY = playerPosition.y - transform.position.y;
         if ((0 < relativePosX && relativePosX < range) && (0 < relativePosY && relativePosY < range))
         {
             moveX = 0f;
