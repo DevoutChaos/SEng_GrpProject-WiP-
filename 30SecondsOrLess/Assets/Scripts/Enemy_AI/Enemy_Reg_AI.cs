@@ -24,7 +24,7 @@ public class Enemy_Reg_AI : MonoBehaviour
 
     public float damage = 10f;
 
-    public CircleCollider2D enemyCollider;
+    public BoxCollider2D enemyCollider;
     private bool takingDamage = false;
     private bool onCooldown = false;
     public int cooldownDelay = 1;
