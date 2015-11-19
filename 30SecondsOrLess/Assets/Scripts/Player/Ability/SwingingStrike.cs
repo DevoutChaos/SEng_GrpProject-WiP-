@@ -46,6 +46,11 @@ public class SwingingStrike : MonoBehaviour
         bCollider.size = new Vector2(2, 2);
         //circleCollider.size = new Vector3(3, 3, 1);
         StartCoroutine(ColliderResetCooldown()); //reset to originial size
+
+
+        
+        Debug.Log(enemy.ToString());
+        Debug.Log(bCollider.ToString());
         
     }
 
