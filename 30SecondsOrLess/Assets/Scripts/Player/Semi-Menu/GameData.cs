@@ -11,7 +11,9 @@ public class GameData : MonoBehaviour
 
     [Header("Ability Ranks (Do Not Edit In Unity)")]
     //Change to Array?
-    public int[] abRanks = new int[7];
+    public int[] abRanks = new int[7] {0, 0, 0, 0, 0, 0, 0};
+
+    public int[] levelReq = new int[60];
 
     [Header("Abilties Equipped (Do Not Edit In Unity)")]
     public string equip1 = "";
@@ -20,6 +22,7 @@ public class GameData : MonoBehaviour
 
     [Header("Players Experience (Do Not Edit In Unity)")]
     public int playerExp = 0;
+    public int playerLvl = 2;
 
     [Header("Players Score (Do Not Edit In Unity)")]
     public int playerScore = 0;
@@ -44,7 +47,7 @@ public class GameData : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        fillLevelReq();
     }
 
     // Update is called once per frame
@@ -67,46 +70,43 @@ public class GameData : MonoBehaviour
         {
             spec1 = "Archer";
             spec2 = "Bandit";
+            //setSpec = "Archer";
         }
 
         /****Updates available abilities based on spec****/
         if (setSpec == "Pyromancer")
         {
             abilityNames = new string[] {"Fireball", "Inferno", "Blazing Radiance", "Spontaneous Combustion", "Ignition", "Flame Armour"};
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             PyroUpdate();
         }
         else if (setSpec == "Nethermancer")
         {
             abilityNames = new string[] { "Arcane Mark", "Arcane Tempest", "Nether Bomb", "Blink Burst", "Nether Fury", "Mage Armour" };
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             NetherUpdate();
         }
         else if (setSpec == "Bloodthirster")
         {
             abilityNames = new string[] { "Bloodthirsty", "Swinging Strike", "Seek the Weak", "Long Strike", "Cleaving Strike", "Quenched Thirst" };
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             BTUpdate();
         }
         else if (setSpec == "Bandit")
         {
             abilityNames = new string[] { "Backstab", "Bloodlust", "Afterimage", "Poisoned Blade", "Conceal", "Frenzy", "Kiss of Death" };
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0, 0 };
             BanditUpdate();
         }
         else if (setSpec == "Archer")
         {
             abilityNames = new string[] { "Powershot", "Sharp Eye", "Corkscrew", "Double Shot", "Explosive Shot", "Arrow Rain" };
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             ArcherUpdate();
         }
         else if (setSpec == "Guradian")
         {
             abilityNames = new string[] { "Energy Sap", "Seismic Smash", "Soul Shield", "Vigorous Revenge", "Unbreakable Resolve", "Spiteful Smack" };
-            abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             GuardianUpdate();
         }
 
+        /****Sets the players level according to their experience****/
+        playerLevel();
     }
     public void MageSelect()
     {
@@ -117,13 +117,39 @@ public class GameData : MonoBehaviour
     public void RangerSelect()
     {
         playerClass = "Ranger";
-        Application.LoadLevel("TutorialStage");
+        /****Temporary code for TESTING ONLY****/
+        playerExp = 5000;
+        Application.LoadLevel("levelUpMenu");
+        /****End of temporary code****/
+        //Application.LoadLevel("TutorialStage");
     }
 
     public void WarriorSelect()
     {
         playerClass = "Warrior";
         Application.LoadLevel("WarriorClassTest");
+    }
+
+    void fillLevelReq()
+    {
+        int expReq = 0;
+        for (int i = 0; i < 60; i++)
+        {
+            expReq += 100;            
+            levelReq[i] = expReq;
+        }
+    }
+
+    void playerLevel()
+    {
+        for (int i = 59; i > 0; i--)
+        {
+            if (playerExp >= levelReq[i])
+            {
+                playerLvl = (i + 1);
+                break;
+            }
+        }
     }
 
     //Mage Spec 1
@@ -351,37 +377,54 @@ public class GameData : MonoBehaviour
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
         }
     }
@@ -611,37 +654,54 @@ public class GameData : MonoBehaviour
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
         }
 
@@ -872,37 +932,54 @@ public class GameData : MonoBehaviour
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
         }
     }
@@ -1132,37 +1209,54 @@ public class GameData : MonoBehaviour
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
         }
     }
@@ -1392,37 +1486,54 @@ public class GameData : MonoBehaviour
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
                 break;
         }
     }
@@ -1438,7 +1549,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 5;
                 abRanks[3] = 5;
                 abRanks[4] = 5;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 29:
@@ -1447,7 +1559,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 4;
                 abRanks[3] = 5;
                 abRanks[4] = 5;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 28:
@@ -1456,7 +1569,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 4;
                 abRanks[3] = 5;
                 abRanks[4] = 4;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 27:
@@ -1465,7 +1579,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 4;
                 abRanks[3] = 4;
                 abRanks[4] = 4;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 26:
@@ -1483,7 +1598,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 4;
                 abRanks[3] = 4;
                 abRanks[4] = 3;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 24:
@@ -1492,7 +1608,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 4;
                 abRanks[3] = 3;
                 abRanks[4] = 3;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 23:
@@ -1501,7 +1618,8 @@ public class GameData : MonoBehaviour
                 abRanks[2] = 3;
                 abRanks[3] = 3;
                 abRanks[4] = 3;
-                abRanks[5] = 5;
+                abRanks[5] = 4;
+                abRanks[6] = 1;
                 break;
 
             case 22:
@@ -1511,6 +1629,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 3;
                 abRanks[4] = 3;
                 abRanks[5] = 4;
+                abRanks[6] = 0;
                 break;
 
             case 21:
@@ -1520,6 +1639,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 3;
                 abRanks[4] = 3;
                 abRanks[5] = 4;
+                abRanks[6] = 0;
                 break;
 
             case 20:
@@ -1529,6 +1649,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 3;
                 abRanks[4] = 3;
                 abRanks[5] = 3;
+                abRanks[6] = 0;
                 break;
 
             case 19:
@@ -1538,6 +1659,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 3;
                 abRanks[4] = 3;
                 abRanks[5] = 3;
+                abRanks[6] = 0;
                 break;
 
             case 18:
@@ -1547,6 +1669,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 3;
                 abRanks[4] = 2;
                 abRanks[5] = 3;
+                abRanks[6] = 0;
                 break;
 
             case 17:
@@ -1556,6 +1679,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 2;
                 abRanks[5] = 3;
+                abRanks[6] = 0;
                 break;
 
             case 16:
@@ -1565,6 +1689,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 2;
                 abRanks[5] = 3;
+                abRanks[6] = 0;
                 break;
 
             case 15:
@@ -1574,6 +1699,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 2;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 14:
@@ -1583,6 +1709,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 2;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 13:
@@ -1592,6 +1719,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 2;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 12:
@@ -1601,6 +1729,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 1;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 11:
@@ -1610,6 +1739,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 1;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 10:
@@ -1619,6 +1749,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 2;
                 abRanks[4] = 1;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 9:
@@ -1628,6 +1759,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 1;
                 abRanks[4] = 1;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 8:
@@ -1637,6 +1769,7 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 1;
                 abRanks[4] = 1;
                 abRanks[5] = 2;
+                abRanks[6] = 0;
                 break;
 
             case 7:
@@ -1646,43 +1779,67 @@ public class GameData : MonoBehaviour
                 abRanks[3] = 1;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
+                abRanks[6] = 0;
                 break;
 
             case 6:
                 abRanks[0] = 1;
                 abRanks[1] = 1;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
+                abRanks[6] = 0;
                 break;
 
             case 5:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 2;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
+                abRanks[6] = 0;
                 break;
 
             case 4:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
                 abRanks[5] = 1;
+                abRanks[6] = 0;
                 break;
 
             case 3:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
                 abRanks[4] = 1;
+                abRanks[5] = 0;
+                abRanks[6] = 0;
                 break;
 
             case 2:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
                 abRanks[2] = 1;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
+                abRanks[6] = 0;
                 break;
 
             case 1:
                 abRanks[0] = 1;
+                abRanks[1] = 0;
+                abRanks[2] = 0;
+                abRanks[3] = 0;
+                abRanks[4] = 0;
+                abRanks[5] = 0;
+                abRanks[6] = 0;
                 break;
         }
     }
