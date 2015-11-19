@@ -96,7 +96,7 @@ public class GameData : MonoBehaviour
         }
         else if (setSpec == "Archer")
         {
-            abilityNames = new string[] { "Powershot", "Sharp Eye", "Corkscrew", "Double Shot", "Explosive Shot", "Arrow Rain" };
+            abilityNames = new string[] { "Powershot", "Sharp Eye", "Corkscrew", "Rapid Fire", "Explosive Shot", "Arrow Rain" };
             abRanks = new int[] { 0, 0, 0, 0, 0, 0 };
             ArcherUpdate();
         }
