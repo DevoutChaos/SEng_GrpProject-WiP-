@@ -127,7 +127,7 @@ public class GameData : MonoBehaviour
     public void WarriorSelect()
     {
         playerClass = "Warrior";
-        Application.LoadLevel("TutorialStage");
+        Application.LoadLevel("WarriorClassTest");
     }
 
     void fillLevelReq()

@@ -30,12 +30,13 @@ public class GameMaster : MonoBehaviour
 	
 	public static void KillPlayer(PlayerController player)
 	{
-		Destroy (player.gameObject);
+		Destroy(player.gameObject);
+		Application.LoadLevel ("GameOverMenu");
 		//gameMaster.StartCoroutine (gameMaster.PlayerRespawn());
 	}
 	
 	public static void KillEnemy(Enemy_Reg_AI enemy)
 	{
-		Destroy (enemy.gameObject);
+		Destroy(enemy.gameObject);
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
     //Declarations
-    Vector2 myLocation;
+    public Vector3 myLocation;
     Vector3 mousePosition;
     Vector2 touchPosition;
     Vector3 worldPosition;
@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
     public float step;
     float angle;
     string moveDirection;
-    
+    public SpriteRenderer meleeAtkSprite;
+
     bool buttonPress = false;	
 	// Health variables
 	public float health = 200f;
@@ -20,9 +21,9 @@ public class PlayerController : MonoBehaviour {
 	public bool testHits = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
-
+	public float speed = 1f;
 	// Player's boxcollider
-	public BoxCollider playercollider;
+	public BoxCollider2D playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour {
     float neg1;
     // Use this for initialization
 	void Start () {
-        myLocation = this.transform.position;
+		//myLocation = this.transform.position;
 
 		enemyObject  = GameObject.FindGameObjectWithTag ("Enemy");
 		enemy = enemyObject.GetComponent<Enemy_Reg_AI>();
@@ -64,17 +65,20 @@ public class PlayerController : MonoBehaviour {
             worldPosition.z = neg1;
             Debug.DrawLine(myLocation, worldPosition, Color.yellow);
             //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector3.MoveTowards(transform.position, worldPosition, step);
+            transform.position = Vector3.MoveTowards(transform.position, worldPosition, speed * step);
             angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 	}
 
-	public void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Enemy") {
+            Debug.Log("attacking enemy");
 			enemy.EnemyDamage(damage);
-		}
+            meleeAtkSprite.enabled = true;
+            StartCoroutine(atkCooldown());
+        }
 	}
 
 
@@ -105,7 +109,14 @@ public class PlayerController : MonoBehaviour {
 		playercollider.enabled = true;
         testHits = true;
 	}
-
+    
+    //cooldown for sprite to disappear
+    IEnumerator atkCooldown()
+    {
+        // Wait for sprite to appear before disappearing
+        yield return new WaitForSeconds(0.4f);
+        meleeAtkSprite.enabled = false;
+    }
     public void ButtonPress()
     {   
         Debug.Log("Hey");
