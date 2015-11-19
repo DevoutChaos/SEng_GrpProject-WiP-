@@ -31,6 +31,7 @@ public class GameMaster : MonoBehaviour
 	public static void KillPlayer(PlayerController player)
 	{
 		Destroy(player.gameObject);
+		Application.LoadLevel ("GameOverMenu");
 		//gameMaster.StartCoroutine (gameMaster.PlayerRespawn());
 	}
 	
