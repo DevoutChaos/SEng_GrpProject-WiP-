@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     Vector2 touchPosition;
     Vector3 worldPosition;
     Vector2 screenPos;
+    public SpriteRenderer meleeAtkSprite;
     public float step;
     float angle;
     string moveDirection;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 	public bool testHits = false;
 	private bool onCooldown = false;
 	public int cooldownDelay = 1;
-
+   
 	// Player's boxcollider
 	public BoxCollider playercollider;
 	public GameObject enemyObject;
@@ -72,7 +73,11 @@ public class PlayerController : MonoBehaviour {
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy") {
+            
 			enemy.EnemyDamage(damage);
+            meleeAtkSprite.enabled = true;
+            StartCoroutine(spriteTime());
+            
 		}
 	}
 
@@ -105,6 +110,12 @@ public class PlayerController : MonoBehaviour {
         testHits = true;
 	}
 
+    IEnumerator spriteTime()
+    {
+        // Wait and then re enable collider
+        yield return new WaitForSeconds(0.4f);
+        meleeAtkSprite.enabled = false;
+    }
     public void ButtonPress()
     {   
         Debug.Log("Hey");
