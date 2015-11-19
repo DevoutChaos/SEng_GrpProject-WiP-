@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public int cooldownDelay = 1;
 	public float speed = 1f;
 	// Player's boxcollider
-	public BoxCollider playercollider;
+	public BoxCollider2D playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
 

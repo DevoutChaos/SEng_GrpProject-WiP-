@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //this is mainly for the melee enemy
 public class Enemy_Reg_AI : MonoBehaviour
