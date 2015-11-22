@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour {
         checkLevels();
         if (remainingLevels <= 0)
         {
-            Application.LoadLevel("TutorialStage");
+            Application.LoadLevel(9);
         }
 	}
 
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour {
     
     public void spec2Button()
     {
-        if (lvlSpec1 < 30)
+        if (lvlSpec2 < 30)
         {
             gameData.spec2Lvl++;
             gameData.setSpec = gameData.spec2;

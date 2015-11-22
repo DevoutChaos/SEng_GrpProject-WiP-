@@ -29,6 +29,14 @@ public class Enemy_Reg_AI : MonoBehaviour
     private bool onCooldown = false;
     public int cooldownDelay = 1;
 
+    public GameObject dataObject;
+    public GameData gameData;
+    public int lvlSpec1;
+    public int lvlSpec2;
+    public int playerLvl;
+    public int remainingLevels;
+    public int enemyCount = 1;
+
     public Enemy_Health enemyHealthBar;
     //Initialisation
     void Start()
@@ -37,6 +45,8 @@ public class Enemy_Reg_AI : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<PlayerController>();
         inverseRange = 0 - range;
+        dataObject = GameObject.FindWithTag("GameData");
+        gameData = (GameData)dataObject.GetComponent(typeof(GameData));
     }
 
     //Call Update once per frame
@@ -84,6 +94,7 @@ public class Enemy_Reg_AI : MonoBehaviour
         // If the player's health is less than 0, kill them
         if (enemyHealthBar.cur_Health <= 0)
         {
+            gameData.playerExp += 100;
             GameMaster.KillEnemy(this);
             Debug.Log("WASTED");
         }

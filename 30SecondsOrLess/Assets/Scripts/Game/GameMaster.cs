@@ -11,7 +11,8 @@ public class GameMaster : MonoBehaviour
 	
 	public static GameMaster gameMaster;
 	public int delay = 2;
-	
+    
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -19,6 +20,7 @@ public class GameMaster : MonoBehaviour
 		{
 			gameMaster = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}
+        
 		
 	}
 	
@@ -38,5 +40,11 @@ public class GameMaster : MonoBehaviour
 	public static void KillEnemy(Enemy_Reg_AI enemy)
 	{
 		Destroy(enemy.gameObject);
+        Application.LoadLevel("levelUpMenu");
 	}
+
+    public void incrementPlayer()
+    {
+        
+    }
 }
