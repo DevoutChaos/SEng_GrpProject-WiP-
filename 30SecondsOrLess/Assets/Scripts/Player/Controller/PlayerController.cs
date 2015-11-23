@@ -26,13 +26,11 @@ public class PlayerController : MonoBehaviour {
 	public BoxCollider2D playercollider;
 	public GameObject enemyObject;
 	public Enemy_Reg_AI enemy;
-
+    public PauseScript pause;
 	public GameObject playerBarObject;
 	public Player_Health playerHealthBar;
-
-
-   
     float neg1;
+
     // Use this for initialization
 	void Start () {
 		//myLocation = this.transform.position;
@@ -55,29 +53,35 @@ public class PlayerController : MonoBehaviour {
         step = Time.deltaTime;
         screenPos.x = ((Screen.width / 2) + myLocation.x);
         screenPos.y = ((Screen.height / 2) + myLocation.y);
-        
-        if (Input.GetButton("Fire1") )
+
+        if (pause.canDoShit)
         {
-            mousePosition = Input.mousePosition;
-            mousePosition.z = neg1;
-            worldPosition.x = (mousePosition.x - screenPos.x);
-            worldPosition.y = (mousePosition.y - screenPos.y);
-            worldPosition.z = neg1;
-            Debug.DrawLine(myLocation, worldPosition, Color.yellow);
-            //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
-            transform.position = Vector3.MoveTowards(transform.position, worldPosition, speed * step);
-            angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
-        }
+            if (Input.GetButton("Fire1"))
+            {
+                mousePosition = Input.mousePosition;
+                mousePosition.z = neg1;
+                worldPosition.x = (mousePosition.x - screenPos.x);
+                worldPosition.y = (mousePosition.y - screenPos.y);
+                worldPosition.z = neg1;
+                Debug.DrawLine(myLocation, worldPosition, Color.yellow);
+                //Debug.Log("My Location: " + screenPos + "MousePos: " + worldPosition);
+                transform.position = Vector3.MoveTowards(transform.position, worldPosition, speed * step);
+                angle = Mathf.Atan2((worldPosition.y - transform.position.y), (worldPosition.x - transform.position.x)) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+        }        
 	}
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Enemy") {
-            Debug.Log("attacking enemy");
-			enemy.EnemyDamage(damage);
-            meleeAtkSprite.enabled = true;
-            StartCoroutine(atkCooldown());
+        if (pause.canDoShit)
+        {
+            if (other.tag == "Enemy")
+            {
+                enemy.EnemyDamage(damage);
+                meleeAtkSprite.enabled = true;
+                StartCoroutine(atkCooldown());
+            }
         }
 	}
 
@@ -96,7 +100,6 @@ public class PlayerController : MonoBehaviour {
 		// If the player's health is less than 0, kill them
 		if (playerHealthBar.cur_Health <= 0) {
 			GameMaster.KillPlayer(this);
-			Debug.Log ("WASTED");
 		}
 		
 	}
