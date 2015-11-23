@@ -19,7 +19,6 @@ public class IGSettingsScript : MonoBehaviour {
 
     public void showSettings()
     {
-        Debug.Log("Oh fuck...");
         show = true;
     }
 
@@ -31,14 +30,12 @@ public class IGSettingsScript : MonoBehaviour {
             {
                 if (PauseScript.paused)
                 {
-                    Debug.Log("Click Resume");
                     show = false;
                     PauseScript.paused = false;
                 }
             }
             if (GUI.Button(new Rect(Screen.width / 2, (Screen.height / 2) + 50, 100, 50), "Quit Game"))
             {
-                Debug.Log("Click Quit");
                 Application.LoadLevel("MainMenu");
             }
         }
