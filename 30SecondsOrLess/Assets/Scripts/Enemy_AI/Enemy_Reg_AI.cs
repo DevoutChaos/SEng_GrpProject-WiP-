@@ -32,6 +32,9 @@ public class Enemy_Reg_AI : MonoBehaviour
     public GameObject dataObject;
     public GameData gameData;
 
+	public GameObject gameMaster;
+	public GameMaster gM;
+
     public Enemy_Health enemyHealthBar;
     //Initialisation
     void Start()
@@ -42,7 +45,15 @@ public class Enemy_Reg_AI : MonoBehaviour
         inverseRange = 0 - range;
         dataObject = GameObject.FindWithTag("GameData");
         gameData = (GameData)dataObject.GetComponent(typeof(GameData));
-    }
+    
+		if (gameMaster == null) {
+			gameMaster = GameObject.FindGameObjectWithTag ("GM");
+		} 
+		if (gameMaster != null) {
+			gM = gameMaster.GetComponent<GameMaster>();
+		}
+	}
+
 
     //Call Update once per frame
     void Update()
@@ -95,7 +106,7 @@ public class Enemy_Reg_AI : MonoBehaviour
         if (enemyHealthBar.cur_Health <= 0)
         {
             gameData.playerExp += 100;
-            GameMaster.KillEnemy(this);
+            gM.KillEnemy(this);
         }
     }
 
