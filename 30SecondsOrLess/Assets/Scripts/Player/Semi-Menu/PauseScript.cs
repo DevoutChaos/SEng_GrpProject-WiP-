@@ -6,10 +6,9 @@ using System.Collections.Generic;
 public class PauseScript : MonoBehaviour {
 
     //Declarations
-    public static bool paused;
+    public bool paused;
     public bool canDoShit = true;
     public IGSettingsScript settings;
-    
 
 	// Use this for initialization
 	void Start () {
