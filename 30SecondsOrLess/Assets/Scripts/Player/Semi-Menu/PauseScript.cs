@@ -7,6 +7,7 @@ public class PauseScript : MonoBehaviour {
 
     //Declarations
     public static bool paused;
+    public bool canDoShit = true;
     public IGSettingsScript settings;
     
 
@@ -19,11 +20,12 @@ public class PauseScript : MonoBehaviour {
 	void Update () {
         if (paused)
         {
-            Debug.Log("flash");
             Time.timeScale = 0;
+            canDoShit = false;
         }
         if (paused == false)
         {
+            canDoShit = true;
             Time.timeScale = 1;
         }
 	}
@@ -32,7 +34,6 @@ public class PauseScript : MonoBehaviour {
     {
         if(paused == false)
         {
-            Debug.Log("Settings selected");
             paused = true;
             settings.showSettings();
         }

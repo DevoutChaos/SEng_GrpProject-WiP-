@@ -21,7 +21,7 @@ public class Enemy_Reg_AI : MonoBehaviour
     public float relativePosY;
     public float inverseRange;
 
-
+    public PauseScript pause;
     public float damage = 10f;
 
     public BoxCollider2D enemyCollider;
@@ -31,11 +31,6 @@ public class Enemy_Reg_AI : MonoBehaviour
 
     public GameObject dataObject;
     public GameData gameData;
-    public int lvlSpec1;
-    public int lvlSpec2;
-    public int playerLvl;
-    public int remainingLevels;
-    public int enemyCount = 1;
 
     public Enemy_Health enemyHealthBar;
     //Initialisation
@@ -52,24 +47,29 @@ public class Enemy_Reg_AI : MonoBehaviour
     //Call Update once per frame
     void Update()
     {
-        if (searching)
+        if (pause.canDoShit == true)
         {
-            Search();
-        }
-        else if (aggro)
-        {
-            Aggro();
-        }
+            if (searching)
+            {
+                Search();
+            }
+            else if (aggro)
+            {
+                Aggro();
+            }
 
-        if (takingDamage == true)
-        {
-            takingDamage = false;
+            if (takingDamage == true)
+            {
+                takingDamage = false;
+            }
         }
-        
     }
     void FixedUpdate()
     {
-        thisRigid.velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
+        if (pause.canDoShit == true)
+        {
+            thisRigid.velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
+        }       
     }
     void Flip()
     {
@@ -96,19 +96,18 @@ public class Enemy_Reg_AI : MonoBehaviour
         {
             gameData.playerExp += 100;
             GameMaster.KillEnemy(this);
-            Debug.Log("WASTED");
         }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("Something");
-        if (other.tag == "Player")
+        if (pause.canDoShit)
         {
-            Debug.Log("Player");
-            player.PlayerDamage(damage);
-        }
-
+            if (other.tag == "Player")
+            {
+                player.PlayerDamage(damage);
+            }
+        }        
     }
 
     void Search()
