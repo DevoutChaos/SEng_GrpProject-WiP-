@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Tutorial : MonoBehaviour {
     //Declarations
-    bool startedTutorial = false;
+    public bool startedTutorial = false;
     //The texure to be drawn for the splash screen 
     public Texture2D backGroundTexture;
     //width and height of button 
@@ -22,7 +22,7 @@ public class Tutorial : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startedTutorial = true;
+            
 	}
 	
 	// Update is called once per frame

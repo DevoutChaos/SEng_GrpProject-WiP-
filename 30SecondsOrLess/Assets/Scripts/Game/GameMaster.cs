@@ -10,7 +10,10 @@ public class GameMaster : MonoBehaviour
 {
 	
 	public static GameMaster gameMaster;
-	public int delay = 2;
+    public Tutorial tutorialScript;
+    public int delay = 2;
+    private bool hasDoneTut = false;
+    public GameObject tutorialObject;
     
 
 	// Use this for initialization
@@ -24,11 +27,24 @@ public class GameMaster : MonoBehaviour
 		
 	}
 	
-	/*public IEnumerator PlayerRespawn()
-	{
-		yield return new WaitForSeconds (delay);
-		Instantiate (playerPrefab, spawnPoint.position, spawnPoint.rotation);
-	}*/
+	void Update()
+    {
+        DontDestroyOnLoad(this);
+        tutorialObject = GameObject.Find("TutorialHandler");
+        if (tutorialObject != null)
+        {
+            tutorialScript = tutorialObject.GetComponent<Tutorial>();
+            if (!hasDoneTut)
+            {
+                tutorialScript.startedTutorial = true;
+                hasDoneTut = true;
+            }
+        }
+        else
+        {
+            Debug.Log("You dun fucked up bro");
+        }
+    }
 	
 	public static void KillPlayer(PlayerController player)
 	{
