@@ -28,10 +28,10 @@ public class IGSettingsScript : MonoBehaviour {
         {
             if (GUI.Button(new Rect(Screen.width / 2, (Screen.height / 2) - 100, 100, 50), "Resume Game"))
             {
-                if (PauseScript.paused)
+                if (pauseMan.paused)
                 {
                     show = false;
-                    PauseScript.paused = false;
+                    pauseMan.paused = false;
                 }
             }
             if (GUI.Button(new Rect(Screen.width / 2, (Screen.height / 2) + 50, 100, 50), "Quit Game"))
