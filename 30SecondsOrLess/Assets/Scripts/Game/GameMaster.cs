@@ -53,6 +53,10 @@ public class GameMaster : MonoBehaviour
 
     void Update()
     {
+        if (Application.loadedLevelName == "MainMenu")
+        {
+            Destroy(this);
+        }
         DontDestroyOnLoad(this);
         if (moveOn)
         {
