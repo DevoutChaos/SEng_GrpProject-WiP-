@@ -15,7 +15,7 @@ public class GameMaster : MonoBehaviour
    //private bool hasDoneTut = false;
     //public GameObject tutorialObject;
     
-	//tutorial declarations
+	/*//tutorial declarations
 	public bool startedTutorial = true;
 	//The texure to be drawn for the splash screen 
 	public Texture2D backGroundTexture;
@@ -33,7 +33,7 @@ public class GameMaster : MonoBehaviour
 	
 	public PauseScript pause;
 	//end declarations
-
+	*/
 	public int score;
 	public int enemiesRemaining;
 	// Use this for initialization
@@ -84,7 +84,7 @@ public class GameMaster : MonoBehaviour
     {
 		score += gain;
     }
-
+	/*
 	//tutorial
 	void OnGUI()
 	{
@@ -108,5 +108,5 @@ public class GameMaster : MonoBehaviour
 				pause.paused = false;
 			} 
 		}
-	}
+	}*/
 }
