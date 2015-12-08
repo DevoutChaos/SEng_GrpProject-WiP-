@@ -26,8 +26,8 @@ public class Enemy_Reg_AI : MonoBehaviour
 
     public BoxCollider2D enemyCollider;
     private bool takingDamage = false;
-    private bool onCooldown = false;
-    public int cooldownDelay = 1;
+   //private bool onCooldown = false;
+    public float cooldownDelay = 2f;
 
     public GameObject dataObject;
     public GameData gameData;
@@ -97,7 +97,7 @@ public class Enemy_Reg_AI : MonoBehaviour
         // Disable the box collider so the player doesn't take double damage
         enemyCollider.enabled = false;
         // Start a cooldown period so the player doesn't keep taking damage
-        if (!onCooldown && enemyHealthBar.cur_Health > 0)
+        if ( enemyHealthBar.cur_Health > 0)
         {
             StartCoroutine(Cooldown());
         }
