@@ -53,6 +53,10 @@ public class GameData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Application.loadedLevelName == "MainMenu")
+        {
+            Destroy(this);
+        }
         DontDestroyOnLoad(this);
 
         /****Updates available apecs based on class****/
@@ -111,7 +115,8 @@ public class GameData : MonoBehaviour
     public void MageSelect()
     {
         playerClass = "Mage";
-        Application.LoadLevel("TutorialStage");
+		playerExp = 500;
+		Application.LoadLevel("levelUpMenu");
     }
 
     public void RangerSelect()
@@ -127,7 +132,8 @@ public class GameData : MonoBehaviour
     public void WarriorSelect()
     {
         playerClass = "Warrior";
-        Application.LoadLevel("WarriorClassTest");
+		playerExp = 500;
+		Application.LoadLevel("levelUpMenu");;
     }
 
     void fillLevelReq()

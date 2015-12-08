@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour {
         checkLevels();
         if (remainingLevels <= 0)
         {
-            Application.LoadLevel(9);
+            Application.LoadLevel("MapGeneration");
         }
 	}
 
