@@ -115,7 +115,8 @@ public class GameData : MonoBehaviour
     public void MageSelect()
     {
         playerClass = "Mage";
-        Application.LoadLevel("TutorialStage");
+		playerExp = 500;
+		Application.LoadLevel("levelUpMenu");
     }
 
     public void RangerSelect()
@@ -131,7 +132,8 @@ public class GameData : MonoBehaviour
     public void WarriorSelect()
     {
         playerClass = "Warrior";
-        Application.LoadLevel("WarriorClassTest");
+		playerExp = 500;
+		Application.LoadLevel("levelUpMenu");;
     }
 
     void fillLevelReq()
