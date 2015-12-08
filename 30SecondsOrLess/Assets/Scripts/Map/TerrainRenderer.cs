@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class TerrainRenderer : MonoBehaviour {
-//	public int [,] terrainMap;
 	public string tilesetName;
 	public GameObject prefabDefault;//If left blank the sprite_basic prefab in the Resources folder will be used
 	public List<TileSet> tileSets;
@@ -17,7 +16,7 @@ public class TerrainRenderer : MonoBehaviour {
 	}
 
 	void Start () {
-		//LoadSprites();
+
 
 
 	}
