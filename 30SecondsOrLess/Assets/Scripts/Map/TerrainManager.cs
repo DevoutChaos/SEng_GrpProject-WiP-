@@ -6,6 +6,9 @@ public class TerrainManager : MonoBehaviour {
 	public Transform terrain;
 	public Transform player;
 	public Transform enemy;
+	public int noOfenemies;
+	public GameObject gameMaster;
+	public GameMaster gM; 
 
 	//public PlayerController player;
 	//private HillGenerator hillGenerator = null;
@@ -22,6 +25,17 @@ public class TerrainManager : MonoBehaviour {
 		//player.position = new Vector3 (1, 1, 0);
 		GenerateCave();
 
+		noOfenemies = 1;
+
+		if (gameMaster == null) {
+			gameMaster = GameObject.FindGameObjectWithTag ("GM");
+		} 
+		if (gameMaster != null) {
+			gM = gameMaster.GetComponent<GameMaster>();
+		}
+		if (gM != null) {
+			gM.enemiesRemaining = noOfenemies;
+		}
 		//GenerateRoom();
 	}
 
