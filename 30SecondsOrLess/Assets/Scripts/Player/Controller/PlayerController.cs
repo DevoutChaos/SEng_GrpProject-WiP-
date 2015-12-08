@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
 	public float damage = 1f;
 
 	public bool testHits = false;
-	private bool onCooldown = false;
-	public int cooldownDelay = 1;
+	//private bool onCooldown = false;
+	public float cooldownDelay = 1.2f;
 	public float speed = 1f;
 	// Player's boxcollider
 	public BoxCollider2D playercollider;
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 		playercollider.enabled = false;
         testHits = false;
 		// Start a cooldown period so the player doesn't keep taking damage
-		if (!onCooldown && playerHealthBar.cur_Health > 0) {
+		if ( playerHealthBar.cur_Health > 0) {
 			StartCoroutine (Cooldown ());
 		}
 
