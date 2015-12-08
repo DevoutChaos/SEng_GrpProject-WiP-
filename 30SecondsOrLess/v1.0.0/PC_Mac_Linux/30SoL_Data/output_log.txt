@@ -1,0 +1,1331 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 640M   (ID=0xfd2)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.184 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.0.0\PC_Mac_Linux\30SoL_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2bf8 -> priority: 1 
+  Thread -> id: 14a8 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.772204 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 269.
+Total: 0.280955 ms (FindLiveObjects: 0.015394 ms CreateObjectMapping: 0.013256 ms MarkObjects: 0.236909 ms  DeleteObjects: 0.014967 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.751353 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 255.
+Total: 0.284804 ms (FindLiveObjects: 0.019243 ms CreateObjectMapping: 0.013684 ms MarkObjects: 0.229211 ms  DeleteObjects: 0.021809 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.715431 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4417.
+Total: 1.016058 ms (FindLiveObjects: 0.172336 ms CreateObjectMapping: 0.101349 ms MarkObjects: 0.710300 ms  DeleteObjects: 0.031644 ms)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Damage!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.844666 ms
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.712438 ms (FindLiveObjects: 0.033783 ms CreateObjectMapping: 0.035065 ms MarkObjects: 0.489213 ms  DeleteObjects: 0.153520 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.565759 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4417.
+Total: 0.985268 ms (FindLiveObjects: 0.158224 ms CreateObjectMapping: 0.076118 ms MarkObjects: 0.696188 ms  DeleteObjects: 0.054309 ms)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.907483 ms
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.790695 ms (FindLiveObjects: 0.043191 ms CreateObjectMapping: 0.035493 ms MarkObjects: 0.550792 ms  DeleteObjects: 0.159507 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.485364 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4417.
+Total: 0.750925 ms (FindLiveObjects: 0.131283 ms CreateObjectMapping: 0.056875 ms MarkObjects: 0.539246 ms  DeleteObjects: 0.023092 ms)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Damage!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.568031 ms
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.723129 ms (FindLiveObjects: 0.032072 ms CreateObjectMapping: 0.033783 ms MarkObjects: 0.505891 ms  DeleteObjects: 0.150527 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.622207 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4417.
+Total: 0.773590 ms (FindLiveObjects: 0.157796 ms CreateObjectMapping: 0.057730 ms MarkObjects: 0.535825 ms  DeleteObjects: 0.021381 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.434093 ms
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 360.
+Total: 0.442173 ms (FindLiveObjects: 0.025658 ms CreateObjectMapping: 0.020098 ms MarkObjects: 0.355791 ms  DeleteObjects: 0.039769 ms)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.711583 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 302.
+Total: 0.433193 ms (FindLiveObjects: 0.020526 ms CreateObjectMapping: 0.016677 ms MarkObjects: 0.325857 ms  DeleteObjects: 0.069704 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.464410 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 288.
+Total: 0.314738 ms (FindLiveObjects: 0.018815 ms CreateObjectMapping: 0.013684 ms MarkObjects: 0.264705 ms  DeleteObjects: 0.016677 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.448160 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4419.
+Total: 0.771024 ms (FindLiveObjects: 0.127434 ms CreateObjectMapping: 0.057730 ms MarkObjects: 0.562338 ms  DeleteObjects: 0.023092 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.478994 ms
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 360.
+Total: 0.425923 ms (FindLiveObjects: 0.020098 ms CreateObjectMapping: 0.017532 ms MarkObjects: 0.351942 ms  DeleteObjects: 0.035493 ms)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.812504 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 302.
+Total: 0.428061 ms (FindLiveObjects: 0.020098 ms CreateObjectMapping: 0.018815 ms MarkObjects: 0.322008 ms  DeleteObjects: 0.066283 ms)
+
+Scene 'WarriorClassTest' (-1) couldn't be loaded because it has not been added to the build settings or the asset bundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 382)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.604674 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 288.
+Total: 0.384015 ms (FindLiveObjects: 0.021381 ms CreateObjectMapping: 0.019243 ms MarkObjects: 0.318159 ms  DeleteObjects: 0.023947 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.455857 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4419.
+Total: 0.749642 ms (FindLiveObjects: 0.122303 ms CreateObjectMapping: 0.056447 ms MarkObjects: 0.547799 ms  DeleteObjects: 0.022664 ms)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+STRIKE!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Damage!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.832928 ms
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 288.
+Total: 0.793261 ms (FindLiveObjects: 0.034210 ms CreateObjectMapping: 0.035065 ms MarkObjects: 0.566615 ms  DeleteObjects: 0.156514 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.440035 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4419.
+Total: 0.810794 ms (FindLiveObjects: 0.156941 ms CreateObjectMapping: 0.062434 ms MarkObjects: 0.567898 ms  DeleteObjects: 0.022664 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.672712 ms
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 360.
+Total: 0.516154 ms (FindLiveObjects: 0.033355 ms CreateObjectMapping: 0.019243 ms MarkObjects: 0.418226 ms  DeleteObjects: 0.044473 ms)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at Enemy_LoS.Searching () [0x00000] in <filename unknown>:0 
+  at Enemy_LoS.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
