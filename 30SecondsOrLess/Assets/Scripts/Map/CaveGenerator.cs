@@ -1,20 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+/**
+ * This class is used to generate a cave in the map
+ * A cave is the actual map we are using.
+ */
 public class CaveGenerator : BaseGenerator {
-	public float initialChance = 0.48f;
-	public int deathLimit = 4;
-	public int birthLimit= 4;
-	public int numberOfSteps = 3;
-	bool fillEdges = true; 
+	public float initialChance = 0.48f; //chance of chance putting a wall on the map
+	public int deathLimit = 4; 
+	public int birthLimit= 4; 
+	public int numberOfSteps = 3; 
+	bool fillEdges = true;  //for the map edges 
 	bool oneCave = true; //we always want a complete path to anywhere in the map
-	public int yOffset = 0;
+	public int yOffset = 0; 
 	public enum CATypes {type1,type2}; //{type1,type2}; 
-	public CATypes caType;
+	public CATypes caType; 
 	private int startfillindex = 999;
-	public ArrayList spots;
+	public ArrayList spots; //empty spots on the map
 
+	//a struct to use a point type variable 
 	public struct Point
 	{
 		public int x, y;
@@ -24,6 +28,7 @@ public class CaveGenerator : BaseGenerator {
 			y = py;
 		}
 	}
+	//method that fills the whole matrix 
 	void FillAll(){
 		for (int x = 0; x < CurrentMap.GetLength(0); x++) {
 			for (int y = 0; y < CurrentMap.GetLength(1); y++) {
@@ -31,6 +36,7 @@ public class CaveGenerator : BaseGenerator {
 			}
 		}
 	}
+	//generates the map
 	public void GenerateMap(){
 		for (int x = 0; x < CurrentMap.GetLength(0); x++) {
 			for (int y = 0; y < CurrentMap.GetLength(1)-yOffset; y++) {
@@ -50,6 +56,7 @@ public class CaveGenerator : BaseGenerator {
 			}
 		}
 	}
+	//Generates the matrix then the map
 	public void Generate(){
 		FillAll();
 		GenerateMap();
@@ -57,6 +64,7 @@ public class CaveGenerator : BaseGenerator {
 		if (oneCave) FillAllButLargest(CurrentMap);
 		if(renderImmediate) Render ();
 	}
+
 
 	void DoSimulationStep(){//Type2 - more memory efficient
 		for (int x = 0; x < CurrentMap.GetLength(0); x++) {
@@ -107,6 +115,7 @@ public class CaveGenerator : BaseGenerator {
 		return newMap;
 	}
 
+	//this methods gets the number of empty spots/not walls
 	int CountAliveNeighbours(int[,] map, int x, int y){
 		int count = 0;
 		for(int i=-1; i<2; i++){
@@ -130,6 +139,7 @@ public class CaveGenerator : BaseGenerator {
 		return count;
 	}
 
+	//Goes thru the edges 
 	public void FillInEdges(int[,] map){
 		for (int x = 0; x < map.GetLength(0); x++) {
 			map[x,0] = 1;
@@ -141,7 +151,8 @@ public class CaveGenerator : BaseGenerator {
 		}
 	}
 
-	public void FillAllBut(int[,] oldMap,int fillException,int fillWith){//Fill in every index with fillWith except the specified one which will be set to zero
+	//Fill in every index with fillWith except the specified one which will be set to zero
+	public void FillAllBut(int[,] oldMap,int fillException,int fillWith){
 		for (int x = 0; x < oldMap.GetLength(0); x++) {
 			for (int y = 0; y < oldMap.GetLength(1); y++) {
 				if(oldMap[x,y] == fillException){//The exception doesn't get filled so presume index wants to be zero(unfilled)
@@ -153,7 +164,9 @@ public class CaveGenerator : BaseGenerator {
 		}
 	}
 
-	public void FillAllButLargest(int[,] map){//Finds largest cave and fills all other caves in
+
+	//Finds largest cave and fills all other caves in
+	public void FillAllButLargest(int[,] map){
 		List<Point> fillCounts = FloodFill (map);
 		int largestsofar = 0; int fillIndex=1;
 		foreach (var fillCount in fillCounts) {
@@ -166,8 +179,8 @@ public class CaveGenerator : BaseGenerator {
 	}
 
 
-
-	public List<Point> FloodFill(int[,] oldMap){//startfillindex - each separate cave is given its own fillindex, this is the start of those indexes
+	//startfillindex - each separate cave is given its own fillindex, this is the start of those indexes
+	public List<Point> FloodFill(int[,] oldMap){
 		int fillindex = startfillindex;
 		List<Point> fillCounts = new List<Point>();//x=fillindex,y=count - Counts the size of each cave, handy for getting rid of all but the largest cave
 		for (int x = 0; x < oldMap.GetLength(0); x++) {
@@ -215,7 +228,7 @@ public class CaveGenerator : BaseGenerator {
 		return fillCounts;
 	}
 
-
+	//This method goes thru the map and find all the empty spots on the map to place the enemy
 	public ArrayList FindSpotForEnemy(int[,] map) {
 
 		spots = new ArrayList();
@@ -234,8 +247,8 @@ public class CaveGenerator : BaseGenerator {
 		return spots;
 	}
 
-
-	public Point FindNearestSpace(int[,] map,Point startPoint){//Returns nearest clear space to specified point
+	//Returns nearest clear space to specified point
+	public Point FindNearestSpace(int[,] map,Point startPoint){
 		var open = new Queue<Point>();
 		int[,] tempmap = new int[map.GetLength (0), map.GetLength (1)];//Tracks visited
 		tempmap[startPoint.x,startPoint.y]=1;

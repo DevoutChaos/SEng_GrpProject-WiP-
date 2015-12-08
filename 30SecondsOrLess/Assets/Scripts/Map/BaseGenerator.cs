@@ -10,7 +10,7 @@ public class BaseGenerator : MonoBehaviour {
 	private TerrainMap terrainMap = null;
 
 
-
+	//returns the map width
 	public int MapWidth{
 		get{
 			if(terrainMap == null) terrainMap = GetComponent<TerrainMap>();
