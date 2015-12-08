@@ -10,9 +10,13 @@ public class GameMaster : MonoBehaviour
 {
 	
 	public static GameMaster gameMaster;
-	public int delay = 2;
+    public Tutorial tutorialScript;
+    public int delay = 2;
+    private bool hasDoneTut = false;
+    public GameObject tutorialObject;
     
-
+	public int score;
+	public int enemiesRemaining;
 	// Use this for initialization
 	void Start () 
 	{
@@ -24,11 +28,24 @@ public class GameMaster : MonoBehaviour
 		
 	}
 	
-	/*public IEnumerator PlayerRespawn()
-	{
-		yield return new WaitForSeconds (delay);
-		Instantiate (playerPrefab, spawnPoint.position, spawnPoint.rotation);
-	}*/
+	void Update()
+    {
+        DontDestroyOnLoad(this);
+        tutorialObject = GameObject.FindGameObjectWithTag("TutHand");
+        if (tutorialObject != null)
+        {
+            tutorialScript = tutorialObject.GetComponent<Tutorial>();
+
+            if (!hasDoneTut)
+            {
+                tutorialScript.startedTutorial = true;
+                hasDoneTut = true;
+            }
+        }
+        if (enemiesRemaining <= 0) {
+			Application.LoadLevel("levelUpMenu");
+		}
+    }
 	
 	public static void KillPlayer(PlayerController player)
 	{
@@ -37,14 +54,15 @@ public class GameMaster : MonoBehaviour
 		//gameMaster.StartCoroutine (gameMaster.PlayerRespawn());
 	}
 	
-	public static void KillEnemy(Enemy_Reg_AI enemy)
+	public void KillEnemy(Enemy_Reg_AI enemy)
 	{
 		Destroy(enemy.gameObject);
-        Application.LoadLevel("levelUpMenu");
+		incrementScore (100);
+		enemiesRemaining--;
 	}
 
-    public void incrementPlayer()
+    public void incrementScore(int gain)
     {
-        
+		score += gain;
     }
 }
