@@ -34,7 +34,7 @@ public class TerrainManager : MonoBehaviour {
 			gM = gameMaster.GetComponent<GameMaster>();
 		}
 		if (gM != null) {
-			//gM.enemiesRemaining = noOfenemies;
+			gM.enemiesRemaining = noOfenemies;
 		}
 		//GenerateRoom();
 	}
