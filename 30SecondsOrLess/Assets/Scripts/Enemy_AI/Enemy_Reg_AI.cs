@@ -105,7 +105,7 @@ public class Enemy_Reg_AI : MonoBehaviour
         // If the player's health is less than 0, kill them
         if (enemyHealthBar.cur_Health <= 0)
         {
-            gameData.playerExp += 100;
+            
             gM.KillEnemy(this);
         }
     }
