@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This class creates the base for the map to be generated
+ * 
+ */
 public class BaseGenerator : MonoBehaviour {
 	public bool renderImmediate = true;
-	//public int [,] currentMap;
 	private TerrainMap terrainMap = null;
 
 

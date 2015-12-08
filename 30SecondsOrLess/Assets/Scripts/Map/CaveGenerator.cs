@@ -8,7 +8,7 @@ public class CaveGenerator : BaseGenerator {
 	public int birthLimit= 4;
 	public int numberOfSteps = 3;
 	bool fillEdges = true; 
-	bool oneCave = true;//we always want a complete path to anywhere in the map
+	bool oneCave = true; //we always want a complete path to anywhere in the map
 	public int yOffset = 0;
 	public enum CATypes {type1,type2}; //{type1,type2}; 
 	public CATypes caType;
