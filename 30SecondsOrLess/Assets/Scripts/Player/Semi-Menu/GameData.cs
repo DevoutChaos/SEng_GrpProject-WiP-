@@ -53,6 +53,10 @@ public class GameData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Application.loadedLevelName == "MainMenu")
+        {
+            Destroy(this);
+        }
         DontDestroyOnLoad(this);
 
         /****Updates available apecs based on class****/
