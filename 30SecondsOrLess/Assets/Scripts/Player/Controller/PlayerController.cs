@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 
 	public bool testHits = false;
 	//private bool onCooldown = false;
-	public float cooldownDelay = 1.2f;
+	public float cooldownDelay = 1.6f;
 	public float speed = 1f;
 	// Player's boxcollider
 	public BoxCollider2D playercollider;

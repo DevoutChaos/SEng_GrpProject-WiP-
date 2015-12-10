@@ -1,0 +1,62 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 640M   (ID=0xfd2)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.054 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\chaos_000\Documents\GitHub\SEng_GrpProject\30SecondsOrLess\v1.1.2\PC_Mac_Linux\30SoL_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2454 -> priority: 1 
+  Thread -> id: 2450 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 11.487961 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 276.
+Total: 0.645299 ms (FindLiveObjects: 0.042335 ms CreateObjectMapping: 0.043191 ms MarkObjects: 0.502897 ms  DeleteObjects: 0.055592 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.688063 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 264.
+Total: 0.272830 ms (FindLiveObjects: 0.021809 ms CreateObjectMapping: 0.020954 ms MarkObjects: 0.209968 ms  DeleteObjects: 0.019243 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.475956 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4422.
+Total: 0.773162 ms (FindLiveObjects: 0.159507 ms CreateObjectMapping: 0.075691 ms MarkObjects: 0.514443 ms  DeleteObjects: 0.023092 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.289980 ms
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.309179 ms (FindLiveObjects: 0.013256 ms CreateObjectMapping: 0.014539 ms MarkObjects: 0.220659 ms  DeleteObjects: 0.060296 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.809511 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 309.
+Total: 0.425495 ms (FindLiveObjects: 0.031217 ms CreateObjectMapping: 0.021381 ms MarkObjects: 0.343817 ms  DeleteObjects: 0.027368 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.636747 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 337.
+Total: 0.432765 ms (FindLiveObjects: 0.029506 ms CreateObjectMapping: 0.019243 ms MarkObjects: 0.354936 ms  DeleteObjects: 0.028223 ms)
+
